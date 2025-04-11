@@ -1,7 +1,4 @@
-
-const Order = require('./order.refactored'); 
-
-
+const Order = require('../fourth_part/order.refactored');
 
 describe('Order with Mocks', () => {
   let mockCustomer;

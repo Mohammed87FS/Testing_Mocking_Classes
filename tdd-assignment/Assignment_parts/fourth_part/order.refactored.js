@@ -1,18 +1,12 @@
-// order.refactored.js
-/**
- * Represents an order in the system
- * 
- * This class follows the Single Responsibility Principle and uses
- * dependency injection to reduce coupling with its dependencies.
- */
+
 class Order {
   /**
    * Creates a new Order instance
    * 
-   * @param {string} orderId - The unique identifier for the order
-   * @param {Customer} customer - The customer placing the order
-   * @param {Product} product - The product being ordered
-   * @param {number} quantity - The quantity of the product being ordered
+   * @param {string} orderId 
+   * @param {Customer} customer 
+   * @param {Product} product 
+   * @param {number} quantity 
    */
   constructor(orderId, customer, product, quantity) {
     this.validateOrderId(orderId);
@@ -29,8 +23,8 @@ class Order {
   /**
    * Validates the order ID
    * 
-   * @param {string} orderId - The order ID to validate
-   * @throws {Error} If the order ID is invalid
+   * @param {string} orderId 
+   * @throws {Error} 
    */
   validateOrderId(orderId) {
     if (!orderId) {
@@ -41,15 +35,15 @@ class Order {
   /**
    * Validates the customer
    * 
-   * @param {Customer} customer - The customer to validate
-   * @throws {Error} If the customer is invalid
+   * @param {Customer} customer 
+   * @throws {Error} 
    */
   validateCustomer(customer) {
     if (!customer) {
       throw new Error('Customer is required');
     }
     
-    // Ensure customer has required methods
+    
     if (typeof customer.getCustomerInfo !== 'function') {
       throw new Error('Customer must implement getCustomerInfo method');
     }
@@ -58,15 +52,15 @@ class Order {
   /**
    * Validates the product
    * 
-   * @param {Product} product - The product to validate
-   * @throws {Error} If the product is invalid
+   * @param {Product} product 
+   * @throws {Error} 
    */
   validateProduct(product) {
     if (!product) {
       throw new Error('Product is required');
     }
     
-    // Ensure product has required methods and properties
+   
     if (typeof product.getProductInfo !== 'function') {
       throw new Error('Product must implement getProductInfo method');
     }
@@ -79,8 +73,8 @@ class Order {
   /**
    * Validates the quantity
    * 
-   * @param {number} quantity - The quantity to validate
-   * @throws {Error} If the quantity is invalid
+   * @param {number} quantity 
+   * @throws {Error} 
    */
   validateQuantity(quantity) {
     if (quantity === null || quantity === undefined) {
@@ -99,7 +93,7 @@ class Order {
   /**
    * Calculates the total cost of the order
    * 
-   * @returns {number} The total cost
+   * @returns {number} 
    */
   calculateTotalCost() {
     return this.quantity * this.product.price;
@@ -108,7 +102,7 @@ class Order {
   /**
    * Formats the total cost as a currency string
    * 
-   * @returns {string} The formatted total cost
+   * @returns {string} 
    */
   formatTotalCost() {
     return this.calculateTotalCost().toFixed(2);
@@ -117,7 +111,7 @@ class Order {
   /**
    * Generates the customer part of the order summary
    * 
-   * @returns {string} The customer information
+   * @returns {string} 
    */
   getCustomerSummary() {
     return this.customer.getCustomerInfo();
@@ -126,7 +120,7 @@ class Order {
   /**
    * Generates the product part of the order summary
    * 
-   * @returns {string} The product information
+   * @returns {string} 
    */
   getProductSummary() {
     return `${this.quantity} x ${this.product.getProductInfo()}`;
@@ -135,7 +129,7 @@ class Order {
   /**
    * Generates a complete summary of the order
    * 
-   * @returns {string} The complete order summary
+   * @returns {string} 
    */
   generateOrderSummary() {
     const customerInfo = this.getCustomerSummary();

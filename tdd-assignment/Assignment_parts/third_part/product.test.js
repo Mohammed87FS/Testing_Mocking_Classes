@@ -1,4 +1,4 @@
-const Product = require('./product');
+const Product = require('../second_part/Product');
 
 describe('Product', () => {
   test('should create a product with correct properties', () => {

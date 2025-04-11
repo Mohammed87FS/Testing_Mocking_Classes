@@ -1,4 +1,6 @@
-const Customer = require('./customer');
+
+const Customer = require('../fourth_part/Customer');
+
 
 describe('Customer', () => {
   test('should create a customer with correct properties', () => {

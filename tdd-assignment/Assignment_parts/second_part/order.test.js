@@ -1,6 +1,9 @@
-const Order = require('./order');
-const Customer = require('./customer');
-const Product = require('./product');
+
+const Order = require('../second_part/Order');
+const Customer = require('../second_part/Customer');
+const Product = require('../second_part/Product');
+
+
 
 describe('Order', () => {
   let customer;

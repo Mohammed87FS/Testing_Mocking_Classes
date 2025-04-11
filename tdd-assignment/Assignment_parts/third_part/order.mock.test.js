@@ -1,6 +1,5 @@
 
-const Order = require('./order');
-
+const Order = require('../second_part/Order');
 
 describe('Order with Mocks', () => {
   let mockCustomer;
@@ -15,7 +14,7 @@ describe('Order with Mocks', () => {
       getCustomerInfo: jest.fn(() => 'Customer 123: John Doe <john@example.com>')
     };
     
-
+   
     mockProduct = {
       productId: 'P101',
       name: 'Laptop',
@@ -51,7 +50,7 @@ describe('Order with Mocks', () => {
     const order = new Order('O1001', mockCustomer, mockProduct, 2);
     const expectedTotal = 2 * 999.99;
     
-
+    
     const calculateTotalCostSpy = jest.spyOn(order, 'calculateTotalCost');
     
     order.generateOrderSummary();
@@ -59,7 +58,7 @@ describe('Order with Mocks', () => {
     expect(calculateTotalCostSpy).toHaveBeenCalled();
     expect(calculateTotalCostSpy).toHaveReturnedWith(expectedTotal);
     
-
+    
     calculateTotalCostSpy.mockRestore();
   });
 
