@@ -9,7 +9,7 @@ I broke down the monolithic code into focused methods that each do just one thin
 * Pulled out calculation logic into `calculateTotalCost()`  
 * Split up the order summary generation into bite-sized pieces
 
-This modular approach means when we need to change something, we only touch a small part of the code - way less chance of breaking things!
+This modular approach means when we need to change something, we only touch a small part of the code .. way less chance of breaking things!
 
 
 The refactored code is much smarter about its dependencies:
@@ -29,7 +29,7 @@ I've made the code tell its own story through:
 * Logical grouping of related methods
 * Consistent style throughout
 
-Other developers can now understand what's happening without needing to decode the logic.
+Other "developers" can now understand what's happening without needing to decode the logic.
 
 
 
@@ -51,4 +51,3 @@ Testing is so much easier now because:
 * Interface requirements are explicit
 * Concerns are properly separated
 
-The result? Better test coverage and tests that are easier to maintain.

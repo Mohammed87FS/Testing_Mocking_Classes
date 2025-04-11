@@ -1,7 +1,7 @@
 # How I Implemented Mocking in My Tests
 
 
-When testing my Order class, I didn't want to use actual Customer and Product objects because that would complicate things. Instead, I created "fake" versions (mocks) that look and behave like the real things but are completely under my control. It's like using stunt doubles in a movie!
+When testing my Order class, I didn't want to use actual Customer and Product objects because that would complicate things. Instead, I created "fake" versions (mocks) that look and behave like the real things but are completely under my control
 
 I used Jest's handy `jest.fn()` function to create these mock methods that return whatever values I needed for my tests.
 
