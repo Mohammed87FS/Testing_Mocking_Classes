@@ -1,0 +1,22 @@
+
+{
+  "name": "tdd-assignment",
+  "version": "1.0.0",
+  "description": "TDD Assignment using JavaScript and Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "TDD",
+    "Jest",
+    "Unit Testing",
+    "Mocking"
+  ],
+  "author": "Mohammed Alhamadani",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
